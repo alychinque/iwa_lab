@@ -3,7 +3,7 @@ const http = require('http'),
 
 http.createServer((req, res) => {
   res.write(id.join(", "));
-  res.write('\n\n' + names.join(', '));
+  res.write('\n\n' + names[0]+ ', ');
   res.write('\n\n' + username.join(', '));
   res.write('\n\n' + email.join(', '));
   res.write('\n\n' + street.join(', '));
@@ -57,8 +57,9 @@ let bs = [];
     bs = data.map(user => user.company.bs)
     
 
-    if (email.indexOf("Shanna@melissa.tv") > -1) {
+    if (email.indexOf("Rey.Padberg@karina.biz") > -1) {
       console.log("found")
+      console.log(email.indexOf("Rey.Padberg@karina.biz"))
     } else {
       console.log("not found");
     } 
